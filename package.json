@@ -9,24 +9,24 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "deploy:joe": "DEPLOY_STAGE=joe npx cdk deploy"
+    "deploy": "npx cdk deploy --profile personal"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.89.0",
-    "@aws-cdk/aws-appsync": "^1.89.0",
-    "@aws-cdk/aws-dynamodb": "^1.89.0",
-    "@aws-cdk/aws-lambda": "^1.89.0",
-    "@types/jest": "^26.0.10",
-    "@types/node": "10.17.27",
-    "aws-cdk": "1.89.0",
-    "aws-sdk": "^2.845.0",
+    "@aws-cdk/assert": "1.97.0",
+    "@aws-cdk/aws-appsync": "^1.97.0",
+    "@aws-cdk/aws-dynamodb": "^1.97.0",
+    "@aws-cdk/aws-lambda": "^1.97.0",
+    "@types/jest": "^26.0.22",
+    "@types/node": "14.14.37",
+    "aws-cdk": "1.97.0",
+    "aws-sdk": "^2.884.0",
     "jest": "^26.4.2",
-    "ts-jest": "^26.2.0",
+    "ts-jest": "^26.5.4",
     "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
+    "typescript": "~4.2.4"
   },
   "dependencies": {
-    "@aws-cdk/core": "1.89.0",
+    "@aws-cdk/core": "1.97.0",
     "source-map-support": "^0.5.16"
   }
 }

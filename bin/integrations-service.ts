@@ -6,4 +6,4 @@ import { IntegrationsServiceStack } from '../lib/integrations-service-stack';
 const stage = process.env.DEPLOY_STAGE || "dev";
 
 const app = new cdk.App();
-new IntegrationsServiceStack(app, `IntegrationsServiceStack-${stage}`);
+new IntegrationsServiceStack(app, `IntegrationsServiceStack`);

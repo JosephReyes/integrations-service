@@ -17,16 +17,13 @@ exports.handler = async (event: Event) => {
   if (event.arguments.id) {
     const result = await dynamoClient
       .get({
-        TableName: 'IntegrationsServiceStack-joe-integrationsdemotablejoe56FD4A97-12I4LGQ8JWUUJ',
+        TableName: 'integrations-demo-table',
         Key: { id: event.arguments.id },
       })
       .promise();
-    return [result.Item];
+    return result.Item;
   } else {
-    const result = await dynamoClient
-      .scan({ TableName: 'IntegrationsServiceStack-joe-integrationsdemotablejoe56FD4A97-12I4LGQ8JWUUJ' })
-      .promise();
-    return result.Items;
+    const result = await dynamoClient.scan({ TableName: 'integrations-demo-table' }).promise();
+    return result.Items?.sort((a, b) => a.id.slice(-1) - b.id.slice(-1));
   }
 };
-

@@ -1,6 +1,6 @@
 type Query {
-    integrations(id: String): [Integration!]
-    credentials: Credentials
+    integrations: [Integration!]
+    integration(id: String!): Integration!
 }
 
 type Integration {
@@ -8,8 +8,4 @@ type Integration {
     name: String
     description: String
     documentation: String
-}
-
-type Credentials {
-    apiKey: String
 }
